@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Word',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False)),
+                ('id', models.BigAutoField(default=uuid.uuid4, primary_key=True, serialize=False)),
                 ('esearch', models.TextField()),
                 ('eentry', models.TextField()),
                 ('tentry', models.TextField()),
