@@ -1,1 +1,1 @@
-web: gunicorn projectfinal.wsgi --log-file -
+web: gunicorn dictionary.wsgi --log-file -
