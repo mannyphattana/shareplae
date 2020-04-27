@@ -35,7 +35,7 @@ class Comment(models.Model):
 
 class Favorite(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    word = models.ForeignKey(Word,on_delete=models.CASCADE)
+    word = models.ForeignKey('Word',on_delete=models.CASCADE)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
