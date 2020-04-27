@@ -23,7 +23,7 @@ class Word(models.Model):
 
 
 class Comment(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True, unique=True)
     word = models.ForeignKey('Word', on_delete=models.CASCADE)
     comment = models.CharField(max_length=255)
     user = models.ForeignKey(
@@ -34,7 +34,7 @@ class Comment(models.Model):
 
 
 class Favorite(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True, unique=True)
     word = models.ForeignKey('Word',on_delete=models.CASCADE)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
