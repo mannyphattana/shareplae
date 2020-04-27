@@ -6,7 +6,7 @@ from django.conf import settings
 
 
 class Word(models.Model):
-    id = models.UUIDField(primary_key=True, unique=True)
+    id = models.BigIntegerField(primary_key=True, unique=True)
     esearch = models.TextField()
     eentry = models.TextField(unique=False, null=False)
     tentry = models.TextField(unique=False, null=False)
