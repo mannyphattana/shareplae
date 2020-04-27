@@ -14,9 +14,5 @@ class Migration(migrations.Migration):
             model_name='word',
             name='id',
             field=models.AutoField(primary_key=True, serialize=False, unique=True),
-        ),
-        migrations.AlterUniqueTogether(
-            name='word',
-            unique_together={('eentry', 'tentry', 'ecat')},
-        ),
+        )
     ]

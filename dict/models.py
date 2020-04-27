@@ -8,9 +8,9 @@ from django.conf import settings
 class Word(models.Model):
     id = models.UUIDField(primary_key=True, unique=True)
     esearch = models.TextField()
-    eentry = models.TextField(unique=False)
-    tentry = models.TextField(unique=False)
-    ecat = models.TextField(unique=False)
+    eentry = models.TextField(unique=False, null=False)
+    tentry = models.TextField(unique=False, null=False)
+    ecat = models.TextField(unique=False, null=False)
     ethai = models.TextField(null=True)
     esyn = models.TextField(null=True)
     eant = models.TextField(null=True)
