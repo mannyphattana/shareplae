@@ -16,12 +16,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='word',
             name='id',
-            field=models.AutoField(primary_key=True, serialize=False),
+            field=models.UUIDField(primary_key=True, serialize=False),
         ),
         migrations.CreateModel(
             name='Comment',
             fields=[
-                ('id', models.AutoField(primary_key=True, serialize=False)),
+                ('id', models.UUIDField(primary_key=True, serialize=False)),
                 ('comment', models.CharField(max_length=255)),
                 ('ts', models.DateTimeField(auto_now_add=True)),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

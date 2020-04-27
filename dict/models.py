@@ -6,7 +6,7 @@ from django.conf import settings
 
 
 class Word(models.Model):
-    id = models.BigIntegerField(primary_key=True, unique=True)
+    id = models.UUIDField(primary_key=True, unique=True)
     esearch = models.TextField()
     eentry = models.TextField(unique=False, null=False)
     tentry = models.TextField(unique=False, null=False)
@@ -23,7 +23,7 @@ class Word(models.Model):
 
 
 class Comment(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    id = models.UUIDField(primary_key=True)
     word = models.ForeignKey('Word', on_delete=models.CASCADE)
     comment = models.CharField(max_length=255)
     user = models.ForeignKey(
@@ -34,7 +34,7 @@ class Comment(models.Model):
 
 
 class Favorite(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    id = models.UUIDField(primary_key=True)
     word = models.ForeignKey('Word',on_delete=models.CASCADE)
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,

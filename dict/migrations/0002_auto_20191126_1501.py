@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='word',
             name='id',
-            field=models.IntegerField(primary_key=True, serialize=False),
+            field=models.UUIDField(primary_key=True, serialize=False),
         ),
     ]
