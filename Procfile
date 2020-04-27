@@ -1,1 +1,1 @@
-web: gunicorn project final.wsgi
+web: gunicorn shareplae.wsgi
