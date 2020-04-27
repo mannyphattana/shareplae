@@ -13,16 +13,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='comment',
             name='id',
-            field=models.AutoField(primary_key=True, serialize=False),
+            field=models.UUIDField(primary_key=True, serialize=False),
         ),
         migrations.AlterField(
             model_name='favorite',
             name='id',
-            field=models.AutoField(primary_key=True, serialize=False),
+            field=models.UUIDField(primary_key=True, serialize=False),
         ),
         migrations.AlterField(
             model_name='word',
             name='id',
-            field=models.AutoField(primary_key=True, serialize=False, unique=True),
+            field=models.UUIDField(primary_key=True, serialize=False, unique=True),
         ),
     ]
